@@ -31,7 +31,7 @@
                         <label for="passwordConnexion">Mot de passe</label>
                         <input type="password" placeholder="*********" id="passwordConnexion">
 
-                        <p id="error"></p>
+                        <p id="errorLogin"></p>
 
                         <button type="submit">Connexion</button>
                     </form>
@@ -41,7 +41,7 @@
                         <input type="text" name="pseudo" placeholder="BellaGoth" id="pseudo">
 
                         <label for="email">Email</label>
-                        <input type="email" placeholder="bella.goth@gmail.com" id="email" pattern="^[\w.%+-]+@company\.com$">
+                        <input type="email" placeholder="bella.goth@gmail.com" id="email">
 
                         <label for="password">Mot de passe</label>
                         <input type="password" placeholder="*********" id="password">
@@ -56,6 +56,9 @@
                         <input type="checkbox" name="subscribeNews" value="newsletter" id="subscribeNews"/>
                         <label for="subscribeNews">Inscription à la newsletter</label>
                         </div>
+
+                        <p id="errorRegister"></p>
+
                         <button type="submit">Inscription</button>
                     </form>
                 </article>

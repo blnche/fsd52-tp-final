@@ -3,42 +3,58 @@ export function validateForm (form) {
     let passwordCode = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ -/:-@[-`{-~]).{12,}$/;
     let emailCode = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
 
+    
     if (form === "login") {
-
+        
+        let error = document.getElementById("errorLogin");
         let email = document.getElementById("emailConnexion").value;
         let password = document.getElementById("passwordConnexion").value;
 
-        let error = document.getElementById("error");
+        let errorMsg = "";
 
-        if (!passwordCode.test(password) && !emailCode.test(email)) {
-            error.textContent = "Un mot de passe valide doit contenir au moins 12 caractères et doit inclure au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial. Veuillez saisir une adresse e-mail valide.";
-            return false;
-        } else if (!passwordCode.test(password)) {
-            error.textContent = "Un mot de passe valide doit contenir au moins 12 caractères et doit inclure au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.";
-            return false;
-        } else if (!emailCode.test(email)) {
-            error.textContent = "Veuillez saisir une adresse e-mail valide.";
-            return false;
-        } else {
-            let error = document.getElementById("error");
+        if (!passwordCode.test(password)) {
+            errorMsg += "Un mot de passe valide doit contenir au moins 12 caractères et doit inclure au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.";
+        } 
+        if (!emailCode.test(email)) {
+            errorMsg += "Veuillez saisir une adresse e-mail valide.";
+        }
+
+        if (!errorMsg) {
             error.textContent = "";
             return true;
+        } else {
+            error.textContent = errorMsg;
+            return false;
         }
     } else if (form === "register") {
 
-        let username = document.getElementById("pseudo");
-        let email = document.getElementById("email");
-        let password = document.getElementById("password");
-        let confirmPassword = document.getElementById("confirmPassword");
+        let error = document.getElementById("errorRegister");
+        let username = document.getElementById("pseudo").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value;
 
-        if((!passwordCode.test(password) && password === confirmPassword) || !emailCode.test(email) || username.length < 4) {
-            let error = document.getElementById("error");
-            error.textContent = "Le mot de passe doit &&!!, l'adresse mail doit posséder '@' et '.com' ou '.fr' et le pseudo doit faire au minimum 4 charatères";
-            return false;
-        } else {
-            let error = document.getElementById("error");
+        let errorMsg = "";
+
+        if (!passwordCode.test(password)) {
+            errorMsg += "Un mot de passe valide doit contenir au moins 12 caractères et doit inclure au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.";
+        } 
+        if (password !== confirmPassword) {
+            errorMsg += "Les deux mot de passes doivent être les mêmes.";
+        }
+        if (!emailCode.test(email)) {
+            errorMsg += "Veuillez saisir une adresse e-mail valide.";
+        }
+        if (username.length < 4) {
+            errorMsg += "Le pseudo ne doit pas faire en dessous de 4 caractère.";
+        } 
+
+        if (!errorMsg) {
             error.textContent = "";
             return true;
+        } else {
+            error.textContent = errorMsg;
+            return false;
         }
 
     }
