@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll("input");
 inputs.forEach(input => {
     
     input.addEventListener("invalid"), (e) => {
-        console.log(e);
+        console.log(e.target);
     }
 });
 

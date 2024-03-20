@@ -4,8 +4,17 @@
         <title>The Sims</title>
         <link rel="stylesheet" href="/style/style.css">
         <script type="module" src="/js/main.js"></script>
+        <script src="/js/error-message.js"></script>
     </head>
     <body>
+        <style>
+            input:invalid {
+            background-color: ivory;
+            border: none;
+            outline: 2px solid red;
+            border-radius: 5px;
+            }
+        </style>
         <header>
         </header>
         <main>
@@ -17,29 +26,31 @@
                     <form action="#" method="get" id="login">
                         <h5>Connexion</h5>
                         <label for="emailConnexion">Email</label>
-                        <input type="email" placeholder="bella.goth@gmail.com" id="emailConnexion" required>
+                        <input type="email" placeholder="bella.goth@gmail.com" id="emailConnexion" >
 
                         <label for="passwordConnexion">Mot de passe</label>
-                        <input type="password" placeholder="*********" id="passwordConnexion" required>
+                        <input type="password" placeholder="*********" id="passwordConnexion">
+
+                        <p id="error"></p>
 
                         <button type="submit">Connexion</button>
                     </form>
                     <form action="#" method="get" id="register">
                         <h5>Inscription</h5>
                         <label for="pseudo">Pseudo</label>
-                        <input type="text" name="pseudo" placeholder="BellaGoth" id="pseudo" required>
+                        <input type="text" name="pseudo" placeholder="BellaGoth" id="pseudo">
 
                         <label for="email">Email</label>
-                        <input type="email" placeholder="bella.goth@gmail.com" id="email" required>
+                        <input type="email" placeholder="bella.goth@gmail.com" id="email" pattern="^[\w.%+-]+@company\.com$">
 
                         <label for="password">Mot de passe</label>
-                        <input type="password" placeholder="*********" id="password" required>
+                        <input type="password" placeholder="*********" id="password">
 
                         <input type="checkbox" name="showPassword" id="showPassword">
                         <label for="showPassword">Montrer le mot de passe</label>
 
                         <label for="confirmPassword">Confirmer le mot de passe</label>
-                        <input type="password" placeholder="*********" id="confirmPassword" required>
+                        <input type="password" placeholder="*********" id="confirmPassword">
 
                         <div>
                         <input type="checkbox" name="subscribeNews" value="newsletter" id="subscribeNews"/>
