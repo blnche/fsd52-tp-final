@@ -1,4 +1,4 @@
-function passwordVisibilityToggle(){
+export function passwordVisibilityToggle(){
     const passwordInput = document.getElementById("password");
 
     if(passwordInput.type === "password") {
