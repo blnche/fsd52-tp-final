@@ -1,69 +1,44 @@
-const inputs = document.querySelectorAll("input");
+export function realTimeValidation() {
+    let emailInput = document.getElementById("emailConnexion");
+    let usernameInput =document.getElementById("pseudo");
 
-inputs.forEach(input => {
+    let error = document.getElementById("errorLogin");
     
-    input.addEventListener("invalid"), (e) => {
-        console.log(e.target);
-    }
-});
+    let emailCode = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+    let passwordCode = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ -/:-@[-`{-~]).{12,}$/;
 
+    
+    emailInput.addEventListener("input", function () {
+        let errorMsg = "";
 
-
-
-
-
-
-
-
-
-
-
-
-
-  //Set form validation
-  document.querySelectorAll("[data-customvalidate").forEach(function(element) {
-    element.addEventListener("submit", function(event) {
-      let isNotValid = false;
-      //Go through each of the input element
-      this.querySelectorAll("input").forEach(function(input) {
-        //Validate the input and set the isNotValid flg
-        if (validateField(input) && !isNotValid) {
-          isNotValid = true;
+        if (!emailCode.test(emailInput.value)) {
+            errorMsg += "Veuillez saisir une adresse e-mail valide.";
         }
-      });
-  
-      //Stop the form submit if not valid
-      if (isNotValid) {    
-        event.preventDefault();
-      }
-    });
-  });
-  
-  
-  //Main Validation Funtion
-  function validateField(field) {
-    let attributes = field.getAttributeNames();
-    let parent = field.parentNode
-    let errorField = parent.querySelector(".formError");
-  
-    let isError = false;
-    //Required Vlidation
-    if (attributes.includes("required") && field.value === "") {
-      errorField.textContent = `The ${field.dataset.errorfieldname} field is required`;
-      isError = true;
-      //Min Length Validation
-    } else if (attributes.includes("minlength") && (field.value.length < field.getAttribute("minlength"))) {
-      errorField.textContent = `The mininmum length for ${field.dataset.errorfieldname} field is ${field.getAttribute("minlength")} characters`;
-      isError = true;
-      //Match Validation
-    } else if (attributes.includes("data-mustmatch")) {
-      let elementToMatch = document.getElementById(field.dataset.mustmatch);
-      if (elementToMatch.value !== field.value) {
-        errorField.textContent = `The ${elementToMatch.dataset.errorfieldname} and ${field.dataset.errorfieldname} do not match`;
-        isError = true;
-      }
-    }
-  
-    parent.classList.toggle("error", isError);
-    return isError;
-  }
+
+        if (!errorMsg) {
+            error.textContent = "";
+            return true;
+        } else {
+            error.textContent = errorMsg;
+            return false;
+        }
+    })
+
+    usernameInput.addEventListener("input", function () {
+        let errorMsg = "";
+
+        let username = usernameInput.value;
+
+        if (username.length < 4) {
+            errorMsg += "Le pseudo ne doit pas faire en dessous de 4 caractère.";
+        } 
+
+        if (!errorMsg) {
+            error.textContent = "";
+            return true;
+        } else {
+            error.textContent = errorMsg;
+            return false;
+        }
+    })
+}
