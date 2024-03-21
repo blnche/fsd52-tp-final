@@ -8,6 +8,7 @@
   background-color: var(--secondary);
   color: var(--text);
   font-family: var(--titles);
+  cursor: pointer;
 }
 
 .authentificationBtn:visited {
@@ -59,7 +60,7 @@ fieldset {
     display: block;
   }
   fieldset {
-    padding: 0;
+    padding-inline: 0;
   }
 }
 
