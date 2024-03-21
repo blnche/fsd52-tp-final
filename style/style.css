@@ -13,6 +13,10 @@ body {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 #history {
   width: 100vw;
 }
