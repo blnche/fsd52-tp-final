@@ -1,6 +1,12 @@
 header {
-  padding-top: 1rem;
+  padding-block: 1.5rem;
   text-align: center;
+  font-family: var(--titles);
+  background-color: var(--primary);
+  color: var(--background);
+  width: 100vw;
+  display: flex;
+  align-items: baseline;
 }
 
 .logoMenu {
@@ -10,9 +16,27 @@ header {
   align-items: center;
 }
 
+nav ul {
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  padding: 0.5rem;
+}
+
+nav li a:hover {
+  border: 2px solid var(--background);
+  border-radius: 0.5rem;
+}
+
 .logoMenu a {
-  text-decoration: none;
-  color: black;
+  text-transform: uppercase;
   margin: 0 1rem;
   display: flex;
   align-items: center;
