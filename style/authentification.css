@@ -1,0 +1,81 @@
+.authentificationBtn {
+  display: flex;
+  width: fit-content;
+  margin-bottom: 1rem;
+  border: 2px solid var(--accent);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-family: var(--titles);
+}
+
+.authentificationBtn:visited {
+  color: var(--text);
+}
+
+.authentificationBtn:hover {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+.formulaire form {
+  border-radius: 1rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.formulaire input {
+  border: 2px solid var(--accent);
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.formulaire label {
+  padding-right: 1rem;
+}
+
+.formulaire h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+#errorRegister,
+#errorLogin {
+  color: brown;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .formulaire form {
+    border: 2px solid var(--secondary);
+    margin-block: 2rem;
+    padding: 0.5rem;
+  }
+  a.authentificationBtn {
+    display: block;
+  }
+  fieldset {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .formulaire form {
+    border: 5px solid var(--secondary);
+  }
+  a.authentificationBtn {
+    display: none;
+  }
+  .formulaireContainer {
+    width: 60vw;
+    margin: auto;
+  }
+  .formulaire form {
+    margin: 2rem;
+    padding: 2rem;
+  }
+}
