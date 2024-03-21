@@ -50,7 +50,23 @@ h3 {
   display: none;
 }
 
-#history {
-  width: 100vw;
+.imgContainer {
+  background-color: var(--secondary);
+  background-image: url('/assets/images/thesims.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
+@media (max-width: 767px) {
+  .imgContainer {
+    height: 15rem;
+  }
+}
+
+@media (min-width: 768px) {
+    .imgContainer {
+      height: 20rem;
+    };
+
+}
