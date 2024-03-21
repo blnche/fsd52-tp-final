@@ -1,3 +1,10 @@
+.carouselContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .cards {
   animation: rotateCarousel 10s infinite linear;
 }
@@ -55,8 +62,6 @@ input[type="radio"] {
   height: 200px; /* Ajustez la hauteur selon vos besoins */
 }
 .carousel img {
-  width: 200px;
-  height: 200px;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -86,13 +91,27 @@ input[type="radio"] {
 }
 
 @media (max-width: 767px) {
+  .carouselContainer {
+    margin-block: 2rem 1rem;
+  }
   .cards {
-    left: -25%;
+    left: -35%;
+  }
+  .carousel img {
+    width: 15rem;
+    height: 9rem;
   }
 }
 
 @media (min-width: 768px) {
+  .carouselContainer {
+    margin-block: 2rem 8rem;
+  }
   .cards {
-    left: -15%;
+    left: -25%;
+  }
+  .carousel img {
+    width: 30rem;
+    height: 18rem;
   }
 }
