@@ -8,31 +8,36 @@ window.addEventListener("DOMContentLoaded", function() {
     // Mobile Menu Toggle
     toggleMobileMenu();
 
-    // Real Time Validation of Inputs
-    // realTimeValidation();
+    // Authentification Page
+    if (this.window.location.pathname.includes("authentification")) {
+        
+        // Real Time Validation of Inputs
+        realTimeValidation();
 
-    // // Password Visibility
-    // const toggleVisibilityButton = document.getElementById("showPassword");
+        // Password Visibility
+        const toggleVisibilityButton = document.getElementById("showPassword");
+    
+        toggleVisibilityButton.addEventListener("click", passwordVisibilityToggle);
+    
+        // Forms Validator
+        const loginForm = document.getElementById("login");
+        loginForm.addEventListener("submit", function (event) {
+            console.log("login submitted");
+    
+            if(!validateForm("login")) {
+                event.preventDefault();
+            };
+        })
+    
+        const registerForm = document.getElementById("register")
+        registerForm.addEventListener("submit", function (event) {
+            console.log("register submitted");
+    
+            if(!validateForm("register")) {
+                event.preventDefault();
+            };
+        })
+    }
 
-    // toggleVisibilityButton.addEventListener("click", passwordVisibilityToggle);
-
-    // // Forms Validator
-    // const loginForm = document.getElementById("login");
-    // loginForm.addEventListener("submit", function (event) {
-    //     console.log("login submitted");
-
-    //     if(!validateForm("login")) {
-    //         event.preventDefault();
-    //     };
-    // })
-
-    // const registerForm = document.getElementById("register")
-    // registerForm.addEventListener("submit", function (event) {
-    //     console.log("register submitted");
-
-    //     if(!validateForm("register")) {
-    //         event.preventDefault();
-    //     };
-    // })
 
 })
