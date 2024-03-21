@@ -14,7 +14,6 @@ export function toggleMobileMenu() {
     
     // Règle pb suivant : si navigation display = none, quand fenêtre passe en desktop il n'y a plus de nav
     window.addEventListener("resize", function () {
-        console.log(window.innerWidth);
         
         if(this.window.innerWidth > 767) {
             nav.style.display = "block";

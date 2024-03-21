@@ -78,10 +78,4 @@ export function realTimeValidation() {
         }
     })
 
-//     - html : img responsive 
-// - css : en module (import de tous les fichiers tyle dans le style.css et une seule balise style dans page html)
-// - js : terminer validation inputs en temps réel
-// - css button plumbbot gets out of place when resizing height
-
-  
 }
