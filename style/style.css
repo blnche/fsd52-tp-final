@@ -3,6 +3,7 @@
 @import "styleHeader.css";
 @import "styleMobile.css";
 @import "footer.css";
+@import "carousel.css";
 
 * {
   margin: 0 auto;

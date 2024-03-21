@@ -74,20 +74,30 @@
           dérivés.
         </p>
       </article>
-      <section class="carousel">
+      <section class="carouselContainer">
         <h3 class="hidden">Défilement d'image du jeu</h3>
-        <img
-          src="../assets/images/sims1/maxresdefault-2.jpg"
-          alt="Image du jeu Les Sims 1"
-        />
-        <img
-          src="../assets/images/sims1/Sims-1-Gameplay-e1567678876536.jpg"
-          alt="Image du jeu Les Sims 1"
-        />
-        <img
-          src="../assets/images/sims1/stove-fire-in-the-first-sims-2.jpg"
-          alt="Image du jeu Les Sims 1"
-        />
+        <div class="carousel">
+          <input type="radio" name="slider" id="item-1" checked />
+          <input type="radio" name="slider" id="item-2" />
+          <input type="radio" name="slider" id="item-3" />
+          <div class="cards">
+            <label class="card" for="item-1" id="song-1">
+              <img src="../assets/images/sims1/maxresdefault-2.jpg" alt="song" class="image1"/>
+            </label>
+            <label class="card" for="item-2" id="song-2">
+              <img
+                src="../assets/images/sims1/Sims-1-Gameplay-e1567678876536.jpg"
+                alt="song"
+              />
+            </label>
+            <label class="card" for="item-3" id="song-3">
+              <img
+                src="../assets/images/sims1/stove-fire-in-the-first-sims-2.jpg"
+                alt="song"
+              />
+            </label>
+          </div>
+        </div>
       </section>
     </main>
     <footer>

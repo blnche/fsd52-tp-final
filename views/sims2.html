@@ -66,20 +66,30 @@
           qu'un nombre limité de vues.
         </p>
       </article>
-      <section class="carousel">
+      <section class="carouselContainer">
         <h3 class="hidden">Défilement d'image du jeu</h3>
-        <img
-          src="/assets/images/sims2/the-sims-2-seasons_1-2.jpg"
-          alt="Image du jeu Les Sims 2"
-        />
-        <img
-          src="/assets/images/sims2/the-sims-2_11-2.jpg"
-          alt="Image du jeu Les Sims 2"
-        />
-        <img
-          src="/assets/images/sims2/the-sims-2_2-2.jpg"
-          alt="Image du jeu Les Sims 2"
-        />
+        <div class="carousel">
+          <input type="radio" name="slider" id="item-1" checked />
+          <input type="radio" name="slider" id="item-2" />
+          <input type="radio" name="slider" id="item-3" />
+          <div class="cards">
+            <label class="card" for="item-1" id="song-1">
+              <img src="../assets/images/sims2/the-sims-2_11-2.jpg" alt="Image du jeu Les Sims 2" class="image1"/>
+            </label>
+            <label class="card" for="item-2" id="song-2">
+              <img
+                src="../assets/images/sims2/the-sims-2-seasons_1-2.jpg"
+                alt="Image du jeu Les Sims 2"
+              />
+            </label>
+            <label class="card" for="item-3" id="song-3">
+              <img
+                src="../assets/images/sims2/the-sims-2_2-2.jpg"
+                alt="Image du jeu Les Sims 2"
+              />
+            </label>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
