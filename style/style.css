@@ -5,6 +5,7 @@
 @import "footer.css";
 @import "styleDekstop.css";
 @import "authentification.css";
+@import "carousel.css";
 
 * {
   margin: 0 auto;
@@ -52,3 +53,4 @@ h3 {
 #history {
   width: 100vw;
 }
+
