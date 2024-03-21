@@ -3,6 +3,7 @@
 @import "styleHeader.css";
 @import "styleMobile.css";
 @import "footer.css";
+@import "styleDekstop.css";
 
 * {
   margin: 0 auto;
@@ -17,16 +18,8 @@ body {
   font-family: var(--body);
 }
 
-.container {
-  width: 70vw;
-}
-
-.hidden {
-  display: none;
-}
-
-#history {
-  width: 100vw;
+p {
+  padding-top: 3rem;
 }
 
 a:visited {
@@ -35,4 +28,26 @@ a:visited {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 70vw;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.logo {
+  padding-block: 2rem;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+#history {
+  width: 100vw;
 }

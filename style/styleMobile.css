@@ -44,17 +44,15 @@
   }
 
   #chronologie img {
-    width: 45vw;
+    width: 40vw;
     margin: auto;
   }
 
   .container {
-    width: 85vw;
     margin-top: 2rem;
   }
 
   #chronologie {
-    width: 80vw;
     margin: 8vw 0 8vw 0;
     padding: 0;
     display: grid;
