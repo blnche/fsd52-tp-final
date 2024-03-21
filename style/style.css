@@ -1,3 +1,6 @@
+@import "styleHeader.css";
+@import "styleMobile.css";
+
 * {
   margin: 0 auto;
   line-height: 1.6;
