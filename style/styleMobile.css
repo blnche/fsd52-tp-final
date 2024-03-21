@@ -8,16 +8,19 @@
     position: fixed;
     bottom: 10px;
     right: 10px;
+    z-index: 9999;
+    cursor: pointer;
   }
 
   .navigation {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: blueviolet;
-    z-index: 9999;
+    z-index: 9998;
   }
 
   .navigation li:first-child {

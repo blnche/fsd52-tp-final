@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/styleMobile.css">
         <link rel="stylesheet" href="style/styleHeader.css">
+        <script type="module" src="/js/main.js"></script>
     </head>
     <body>
         <header>
@@ -15,7 +16,7 @@
                     <h1>Les Sims</h1>
                 </a>  
             </div>
-            <nav class="navigation">
+            <nav class="navigation" id="nav">
                 <ul>
                     <li><a href="/index.html">Accueil</a></li>
                     <li><a href="./views/sims1.html">Les Sims 1</a></li>
@@ -24,10 +25,10 @@
                     <li><a href="./views/sims4.html">Les Sims 4</a></li>
                     <li><a href="./views/authentification.html">Compte</a></li>
                 </ul>
-                <a href="./views/authentification.html">
+            </nav>
+            <a href="javascript:void(0);" id="menuButton">
                 <img class="diamond" src=".//assets/images/diamond.png" alt="Identification / Inscription">
             </a>
-            </nav>
         </header>
         <main>
             <img id="history" src="./assets/images/thesims.jpg" alt="l'histoire des sims, image des évolution graphique des sims à travers les différents jeux.">
