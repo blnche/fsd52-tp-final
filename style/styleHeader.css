@@ -1,0 +1,19 @@
+header {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.logoMenu {
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoMenu a {
+  text-decoration: none;
+  color: black;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+}

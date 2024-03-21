@@ -1,5 +1,80 @@
 @media (max-width: 767px) and (orientation: portrait) {
-  img {
+  .diamond {
+    width: 3rem;
+    border-radius: 60%;
+    margin: 0 1rem 1rem 0;
+    padding: 0.5rem;
+    background-color: white;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
+    height: 100vh;
+    background-color: blueviolet;
+    z-index: 9999;
+  }
+
+  .navigation li:first-child {
+    margin-top: 32vh;
+  }
+
+  .navigation li {
+    padding: 0 6vw 0 0;
+    list-style-type: none;
+  }
+
+  .navigation a {
+    display: flex;
+    justify-content: flex-end;
+    align-content: end;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 2rem;
+  }
+
+  #chronologie img {
+    width: 45vw;
+    margin: auto;
+  }
+
+  .container {
+    width: 85vw;
+    margin-top: 2rem;
+  }
+
+  #chronologie {
+    width: 80vw;
+    margin: 8vw 0 8vw 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
+    justify-content: space-around;
+  }
+
+  #chronologie a:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #chronologie a:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  #chronologie a:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  #chronologie a:nth-child(4) {
+    grid-column: 2;
+    grid-row: 4;
   }
 }
