@@ -1,4 +1,4 @@
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) {
   .diamond {
     width: 3rem;
     border-radius: 60%;
