@@ -3,6 +3,8 @@
 @import "styleHeader.css";
 @import "styleMobile.css";
 @import "footer.css";
+@import "styleDekstop.css";
+@import "authentification.css";
 @import "carousel.css";
 
 * {
@@ -11,15 +13,37 @@
 }
 
 body {
-  text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: var(--body);
 }
 
+p {
+  padding-top: 3rem;
+  text-align: justify;
+}
+
+a:visited {
+  color: var(--background);
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 70vw;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.logo {
+  padding-block: 2rem;
+  display: flex;
 }
 
 .hidden {
@@ -30,10 +54,3 @@ body {
   width: 100vw;
 }
 
-a:visited {
-  color: var(--background);
-}
-
-a {
-  text-decoration: none;
-}

@@ -1,92 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>The Sims</title>
-        <link rel="stylesheet" href="/style/style.css">
-        <script type="module" src="/js/main.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Sims</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <script type="module" src="/js/main.js"></script>
+  </head>
 
-    <body>
-        <header>
-            <div class="logoMenu">
-                <a href="../index.html">
-                    <h1>Les Sims</h1>
-                </a>  
-              </div>
-              <nav class="navigation" id="nav">
-                  <ul>
-                      <li><a href="/index.html">Accueil</a></li>
-                      <li><a href="/views/sims1.html">Les Sims 1</a></li>
-                      <li><a href="/views/sims2.html">Les Sims 2</a></li>
-                      <li><a href="/views/sims3.html">Les Sims 3</a></li>
-                      <li><a href="/views/sims4.html">Les Sims 4</a></li>
-                      <li><a href="/views/authentification.html">Compte</a></li>
-                  </ul>
-              </nav>
-              <a href="javascript:void(0);" id="menuButton">
-                  <img class="diamond" src="../assets/images/diamond.png" alt="Identification / Inscription">
-              </a>
-        </header>
-        <main class="container">
-            <section>
-                <h2 class="hidden">Page d'authentification</h2>
-                    <a href="#register">Inscription</a>
-                    <a href="#login">Connexion</a>
+  <body>
+    <header>
+      <div class="logoMenu">
+        <a href="../index.html">
+          <h1>Les Sims</h1>
+        </a>
+      </div>
+      <nav class="navigation" id="nav">
+        <ul>
+          <li><a href="/index.html">Accueil</a></li>
+          <li><a href="/views/sims1.html">Les Sims 1</a></li>
+          <li><a href="/views/sims2.html">Les Sims 2</a></li>
+          <li><a href="/views/sims3.html">Les Sims 3</a></li>
+          <li><a href="/views/sims4.html">Les Sims 4</a></li>
+          <li><a href="/views/authentification.html">Compte</a></li>
+        </ul>
+      </nav>
+      <a href="javascript:void(0);" id="menuButton">
+        <img
+          class="diamond"
+          src="../assets/images/diamond.png"
+          alt="Identification / Inscription"
+        />
+      </a>
+    </header>
+    <main class="container">
+      <section class="formulaireContainer">
+        <h2 class="hidden">Page d'authentification</h2>
+        <a class="authentificationBtn" href="#register">Inscription</a>
+        <a class="authentificationBtn" href="#login">Connexion</a>
+        <div class="formulaire">
+          <form action="#" method="post" id="login">
+            <h2>Connexion</h2>
+            <fieldset>
+              <label for="emailConnexion">Email</label>
+              <input
+                type="email"
+                placeholder="bella.goth@gmail.com"
+                id="emailConnexion"
+              />
+            </fieldset>
+            <fieldset>
+              <label for="passwordConnexion">Mot de passe</label>
+              <input
+                type="password"
+                placeholder="*********"
+                id="passwordConnexion"
+              />
+            </fieldset>
 
-                    <form action="#" method="post" id="login">
-                        <h2>Connexion</h2>
-                        <label for="emailConnexion">Email</label>
-                        <input type="email" placeholder="bella.goth@gmail.com" id="emailConnexion" >
+            <p id="errorLogin"></p>
 
-                        <label for="passwordConnexion">Mot de passe</label>
-                        <input type="password" placeholder="*********" id="passwordConnexion">
+            <button class="authentificationBtn" type="submit">Connexion</button>
+          </form>
+          <form action="#" method="post" id="register">
+            <h2>Inscription</h2>
+            <fieldset>
+              <label for="pseudo">Pseudo</label>
+              <input
+                type="text"
+                name="pseudo"
+                placeholder="BellaGoth"
+                id="pseudo"
+              />
+            </fieldset>
+            <fieldset>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                placeholder="bella.goth@gmail.com"
+                id="email"
+              />
+            </fieldset>
+            <fieldset>
+              <label for="password">Mot de passe</label>
+              <input type="password" placeholder="*********" id="password" />
+            </fieldset>
+            <fieldset>
+              <input type="checkbox" name="showPassword" id="showPassword" />
+              <label for="showPassword">Montrer le mot de passe</label>
+            </fieldset>
+            <fieldset>
+              <label for="confirmPassword">Confirmer le mot de passe</label>
+              <input
+                type="password"
+                placeholder="*********"
+                id="confirmPassword"
+              />
+            </fieldset>
 
-                        <p id="errorLogin"></p>
+            <fieldset>
+              <input
+                type="checkbox"
+                name="subscribeNews"
+                value="newsletter"
+                id="subscribeNews"
+              />
+              <label for="subscribeNews">Inscription à la newsletter</label>
+            </fieldset>
 
-                        <button type="submit">Connexion</button>
-                    </form>
-                    <form action="#" method="post" id="register">
-                        <h3>Inscription</h3>
-                        <label for="pseudo">Pseudo</label>
-                        <input type="text" name="pseudo" placeholder="BellaGoth" id="pseudo">
+            <p id="errorRegister"></p>
 
-                        <label for="email">Email</label>
-                        <input type="email" placeholder="bella.goth@gmail.com" id="email">
-
-                        <label for="password">Mot de passe</label>
-                        <input type="password" placeholder="*********" id="password">
-
-                        <input type="checkbox" name="showPassword" id="showPassword">
-                        <label for="showPassword">Montrer le mot de passe</label>
-
-                        <label for="confirmPassword">Confirmer le mot de passe</label>
-                        <input type="password" placeholder="*********" id="confirmPassword">
-
-                        <div>
-                        <input type="checkbox" name="subscribeNews" value="newsletter" id="subscribeNews"/>
-                        <label for="subscribeNews">Inscription à la newsletter</label>
-                        </div>
-
-                        <p id="errorRegister"></p>
-
-                        <button type="submit">Inscription</button>
-                    </form>
-            </section>
-        </main>
-        <footer>
-            <nav>
-                <ul>
-                    <li><a href="/index.html">Accueil</a></li>
-                    <li><a href="/views/sims1.html">Les Sims 1</a></li>
-                    <li><a href="/views/sims2.html">Les Sims 2</a></li>
-                    <li><a href="/views/sims3.html">Les Sims 3</a></li>
-                    <li><a href="/views/sims4.html">Les Sims 4</a></li>
-                    <li><a href="/views/authentification.html">Compte</a></li>
-                </ul>
-            </nav>
-            <p>Made by Armance et Blanche</p>
-        </footer>
-    </body>
+            <button class="authentificationBtn" type="submit">
+              Inscription
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Accueil</a></li>
+          <li><a href="/views/sims1.html">Les Sims 1</a></li>
+          <li><a href="/views/sims2.html">Les Sims 2</a></li>
+          <li><a href="/views/sims3.html">Les Sims 3</a></li>
+          <li><a href="/views/sims4.html">Les Sims 4</a></li>
+          <li><a href="/views/authentification.html">Compte</a></li>
+        </ul>
+      </nav>
+      <p>Made by Armance et Blanche</p>
+    </footer>
+  </body>
 </html>
