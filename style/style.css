@@ -1,3 +1,5 @@
+@import "colors.css";
+@import "fonts.css";
 @import "styleHeader.css";
 @import "styleMobile.css";
 
@@ -11,6 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  font-family: var(--body);
 }
 
 .hidden {
