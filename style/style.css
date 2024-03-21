@@ -4,6 +4,7 @@
 @import "styleMobile.css";
 @import "footer.css";
 @import "styleDekstop.css";
+@import "authentification.css";
 
 * {
   margin: 0 auto;
@@ -11,7 +12,6 @@
 }
 
 body {
-  text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,6 +20,7 @@ body {
 
 p {
   padding-top: 3rem;
+  text-align: justify;
 }
 
 a:visited {

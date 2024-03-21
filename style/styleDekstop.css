@@ -30,4 +30,8 @@
     grid-column: 2;
     grid-row: 2;
   }
+
+  .diamond {
+    display: none;
+  }
 }
