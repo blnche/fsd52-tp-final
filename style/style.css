@@ -1,3 +1,8 @@
+@import "colors.css";
+@import "fonts.css";
+@import "styleHeader.css";
+@import "styleMobile.css";
+
 * {
   margin: 0 auto;
   line-height: 1.6;
@@ -8,6 +13,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  font-family: var(--body);
+}
+
+.hidden {
+  display: none;
 }
 
 #history {
