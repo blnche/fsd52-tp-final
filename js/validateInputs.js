@@ -1,8 +1,12 @@
 export function realTimeValidation() {
     let emailInput = document.getElementById("emailConnexion");
-    let usernameInput =document.getElementById("pseudo");
+    let usernameInput = document.getElementById("pseudo");
+    let password = document.getElementById("password");
+    let confirmPassword = document.getElementById("confirmPassword");
 
-    let error = document.getElementById("errorLogin");
+    let errorLogin = document.getElementById("errorLogin");
+    let errorRegister = document.getElementById("errorRegister");
+
     
     let emailCode = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
     let passwordCode = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ -/:-@[-`{-~]).{12,}$/;
@@ -16,10 +20,10 @@ export function realTimeValidation() {
         }
 
         if (!errorMsg) {
-            error.textContent = "";
+            errorLogin.textContent = "";
             return true;
         } else {
-            error.textContent = errorMsg;
+            errorLogin.textContent = errorMsg;
             return false;
         }
     })
@@ -34,10 +38,42 @@ export function realTimeValidation() {
         } 
 
         if (!errorMsg) {
-            error.textContent = "";
+            errorRegister.textContent = "";
             return true;
         } else {
-            error.textContent = errorMsg;
+            errorRegister.textContent = errorMsg;
+            return false;
+        }
+    })
+
+    password.addEventListener("input", function () {
+        let errorMsg = "";
+
+        if (!passwordCode.test(password.value)) {
+            errorMsg += "Un mot de passe valide doit contenir au moins 12 caractères et doit inclure au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.";
+        }
+
+        if (!errorMsg) {
+            errorRegister.textContent = "";
+            return true;
+        } else {
+            errorRegister.textContent = errorMsg;
+            return false;
+        }
+    })
+
+    confirmPassword.addEventListener("input", function () {
+        let errorMsg = "";
+
+        if (password.value !== confirmPassword.value) {
+            errorMsg += "Les deux mot de passes doivent être les mêmes.";
+        }
+
+        if (!errorMsg) {
+            errorRegister.textContent = "";
+            return true;
+        } else {
+            errorRegister.textContent = errorMsg;
             return false;
         }
     })
