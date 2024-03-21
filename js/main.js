@@ -1,6 +1,6 @@
 import { passwordVisibilityToggle } from '/js/show-hide-password.js';
 import { validateForm } from '/js/validateForm.js';
-import { realTimeValidation } from '/js/error-message.js';
+import { realTimeValidation } from '/js/validateInputs.js';
 
 window.addEventListener("DOMContentLoaded", function() {
 
