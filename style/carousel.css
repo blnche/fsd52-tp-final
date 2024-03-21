@@ -1,0 +1,86 @@
+.cards {
+  left: -25%;
+    animation: rotateCarousel 10s infinite linear;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .card {
+    position: absolute;
+    left: 50%; /* Centrer horizontalement */
+    transform: translateX(-50%);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .carousel {
+    width: 85vw;
+    height: auto;
+    transform-style: preserve-3d;
+    justify-content: center;
+  }
+  .card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  #song-1 {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  #song-2, #song-3 {
+    transform: translateX(-150%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  #item-2:checked ~ .cards #song-2 {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  #item-3:checked ~ .cards #song-3 {
+    transform: translateX(50%) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .cards {
+    position: relative; /* Pour positionner les éléments enfants de manière absolue */
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
+  }
+  .carousel img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  #item-1:checked ~ .cards #song-3,
+  #item-2:checked ~ .cards #song-1,
+  #item-3:checked ~ .cards #song-2 {
+    transform: translatex(-40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #song-2,
+  #item-2:checked ~ .cards #song-3,
+  #item-3:checked ~ .cards #song-1 {
+    transform: translatex(40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #song-1,
+  #item-2:checked ~ .cards #song-2,
+  #item-3:checked ~ .cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }

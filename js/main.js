@@ -5,6 +5,7 @@ import { toggleMobileMenu } from '/js/toggleMenu.js';
 
 window.addEventListener("DOMContentLoaded", function() {
 
+    console.log(this.window.innerWidth);
     // Mobile Menu Toggle
     toggleMobileMenu();
 
