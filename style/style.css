@@ -1,12 +1,15 @@
-body {
+* {
+  margin: 0 auto;
   line-height: 1.6;
+}
+
+body {
   text-align: justify;
-  margin: auto;
-  width: 90vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-p {
-  width: 90vw;
+#history {
+  width: 100vw;
 }
