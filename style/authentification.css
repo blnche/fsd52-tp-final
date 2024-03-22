@@ -26,10 +26,27 @@
 
 fieldset {
   border: none;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+fieldset input {
+  width: 90%;
+}
+
+.checkbox {
+  text-align: center;
+  height: 15px;
+  padding: 0;
+  margin-left: 0;
+}
+
+.checkbox input {
+  width: 10%;
 }
 
 .formulaire input {
-  border: 2px solid var(--accent);
+  border: 1px solid var(--accent);
   padding: 0.2rem;
   border-radius: 0.5rem;
 }
@@ -70,7 +87,7 @@ fieldset {
 
 @media (min-width: 768px) {
   .formulaire form {
-    border: 5px solid var(--secondary);
+    border: 4px solid var(--secondary);
   }
   a.authentificationBtn {
     display: none;

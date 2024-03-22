@@ -47,6 +47,7 @@
                 type="email"
                 placeholder="bella.goth@gmail.com"
                 id="emailConnexion"
+                required
               />
             </fieldset>
             <fieldset>
@@ -55,6 +56,7 @@
                 type="password"
                 placeholder="*********"
                 id="passwordConnexion"
+                required
               />
             </fieldset>
 
@@ -80,22 +82,30 @@
                 type="email"
                 placeholder="bella.goth@gmail.com"
                 id="email"
+                required
               />
             </fieldset>
             <fieldset>
               <label for="password">Mot de passe</label>
               <input type="password" placeholder="*********" id="password" />
+              <fieldset class="checkbox">
+                <input
+                  type="checkbox"
+                  name="showPassword"
+                  id="showPassword"
+                  required
+                />
+                <label for="showPassword">Afficher le mot de passe</label>
+              </fieldset>
             </fieldset>
-            <fieldset>
-              <input type="checkbox" name="showPassword" id="showPassword" />
-              <label for="showPassword">Montrer le mot de passe</label>
-            </fieldset>
+
             <fieldset>
               <label for="confirmPassword">Confirmer le mot de passe</label>
               <input
                 type="password"
                 placeholder="*********"
                 id="confirmPassword"
+                required
               />
             </fieldset>
 
