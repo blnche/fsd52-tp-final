@@ -8,6 +8,7 @@
   background-color: var(--secondary);
   color: var(--text);
   font-family: var(--titles);
+  cursor: pointer;
 }
 
 .authentificationBtn:visited {
@@ -31,6 +32,10 @@ fieldset {
   border: 2px solid var(--accent);
   padding: 0.2rem;
   border-radius: 0.5rem;
+}
+
+.formulaire input:invalid {
+  border: 2px solid brown;
 }
 
 .formulaire label {
@@ -59,7 +64,7 @@ fieldset {
     display: block;
   }
   fieldset {
-    padding: 0;
+    padding-inline: 0;
   }
 }
 
