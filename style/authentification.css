@@ -34,6 +34,10 @@ fieldset {
   border-radius: 0.5rem;
 }
 
+.formulaire input:invalid {
+  border: 2px solid brown;
+}
+
 .formulaire label {
   padding-right: 1rem;
 }
