@@ -3,6 +3,10 @@ footer {
   background-color: var(--primary);
 }
 
+footer a {
+  font-weight: bold;
+}
+
 footer ul {
   padding-top: 1.5rem;
   display: grid;
@@ -47,6 +51,7 @@ li:nth-child(6) {
 }
 
 footer p {
+  font-weight: bold;
   color: var(--background);
   padding-block: 2rem;
   text-align: center;

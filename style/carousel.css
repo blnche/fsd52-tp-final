@@ -12,7 +12,7 @@
 input[type="radio"] {
   display: none;
 }
-  
+
 .card {
   position: absolute;
   left: 50%; /* Centrer horizontalement */
@@ -25,7 +25,9 @@ input[type="radio"] {
   height: auto;
   transform-style: preserve-3d;
   justify-content: center;
+  align-content: center;
 }
+
 .card img {
   width: 200px;
   height: 200px;
@@ -39,7 +41,8 @@ input[type="radio"] {
   z-index: 1;
 }
 
-#song-2, #song-3 {
+#song-2,
+#song-3 {
   transform: translateX(-150%) scale(0.8);
   opacity: 0.4;
   z-index: 0;
